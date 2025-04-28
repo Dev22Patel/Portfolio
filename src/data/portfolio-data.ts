@@ -1,25 +1,56 @@
 // Technology definitions
+// Technology definitions
 export const technologies = {
-  frontend: [
-    { name: "React", icon: "⚛️" },
-    { name: "Next.js", icon: "▲" },
-    { name: "TypeScript", icon: "TS" },
-    { name: "TailwindCSS", icon: "🌊" },
-    { name: "ShadCN UI", icon: "🧩" },
-  ],
-  backend: [
-    { name: "Node.js", icon: "🟢" },
-    { name: "Express.js", icon: "🚂" },
-    { name: "MongoDB", icon: "🍃" },
-    { name: "PostgreSQL", icon: "🐘" },
-  ],
-  tools: [
-    { name: "Git", icon: "🔄" },
-    { name: "GitHub", icon: "🐙" },
-    { name: "VS Code", icon: "📝" },
-    { name: "Docker", icon: "🐳" },
-  ],
-};
+    frontend: [
+      { name: "React", icon: "⚛" },
+      { name: "Next.js", icon: "△" },
+      { name: "TypeScript", icon: "TS" },
+      { name: "TailwindCSS", icon: "≈" },
+      { name: "ShadCN UI", icon: "■" },
+      { name: "Vue.js", icon: "V" },
+      { name: "Angular", icon: "◯" },
+      { name: "Redux", icon: "↺" },
+      { name: "HTML5", icon: "◊" },
+      { name: "CSS3", icon: "✧" },
+      { name: "JavaScript", icon: "JS" },
+      { name: "SASS/SCSS", icon: "§" },
+      { name: "Material UI", icon: "▣" },
+      { name: "Chakra UI", icon: "○" },
+      { name: "Framer Motion", icon: "⟳" },
+    ],
+    backend: [
+      { name: "Node.js", icon: "◉" },
+      { name: "Express.js", icon: "E" },
+      { name: "MongoDB", icon: "☰" },
+      { name: "PostgreSQL", icon: "◎" },
+      { name: "MySQL", icon: "▦" },
+      { name: "Firebase", icon: "▲" },
+      { name: "GraphQL", icon: "◬" },
+      { name: "REST API", icon: "⦿" },
+      { name: "Prisma", icon: "⬡" },
+      { name: "Supabase", icon: "⊡" },
+      { name: "Django", icon: "D" },
+      { name: "Flask", icon: "F" },
+      { name: "AWS", icon: "⎔" },
+      { name: "Vercel", icon: "◥" },
+    ],
+    tools: [
+      { name: "Git", icon: "↺" },
+      { name: "GitHub", icon: "⎈" },
+      { name: "VS Code", icon: "⬚" },
+      { name: "Docker", icon: "◘" },
+      { name: "Figma", icon: "⬝" },
+      { name: "Postman", icon: "↹" },
+      { name: "Jest", icon: "✓" },
+      { name: "Webpack", icon: "▣" },
+      { name: "NPM", icon: "⬡" },
+      { name: "Yarn", icon: "➰" },
+      { name: "Babel", icon: "⦾" },
+      { name: "ESLint", icon: "E" },
+      { name: "Jira", icon: "◇" },
+      { name: "Notion", icon: "⧉" },
+    ]
+  };
 
 // Personal information
 export const personalInfo = {
@@ -58,6 +89,7 @@ export const projects = [
     description:
       "A personal portfolio website to showcase my projects, experience, and skills. Built with Next.js, React, and TailwindCSS.",
     image: "https://placehold.co/600x400/21bef9/ffffff",
+    video: "videos/stp.mp4",
     technologies: ["React.js", "Next.js", "TailwindCSS", "TypeScript"],
     links: {
       github: "https://github.com",
@@ -80,34 +112,44 @@ export const projects = [
 
 // Experience data
 export const experiences = [
-  {
-    company: "Tech Company",
-    position: "Software Engineer",
-    type: "Full-time",
-    location: "Remote | San Francisco, CA",
-    period: "December 2024 - Present",
-    responsibilities: [
-      "Developed and maintained full-stack web applications using React, Next.js, and Node.js.",
-      "Optimized application performance by implementing efficient algorithms and database queries.",
-      "Collaborated with cross-functional teams to define, design, and ship new features.",
-      "Implemented responsive design principles to ensure compatibility across devices.",
-      "Worked with RESTful APIs and GraphQL to integrate various services.",
-      "Contributed to microservice architecture following Agile methodologies and managed CI/CD pipelines on GitLab.",
-      "Wrote Kubernetes cron-job scripts for executing periodic tasks on deployed pods.",
-    ],
-  },
-  {
-    company: "Startup Inc.",
-    position: "Frontend Developer Intern",
-    type: "Part-time",
-    location: "Remote | New York, NY",
-    period: "May 2024 - October 2024",
-    responsibilities: [
-      "Assisted in developing user interfaces using React and TypeScript.",
-      "Created reusable components and implemented state management with Redux.",
-      "Fixed bugs and improved application stability and performance.",
-      "Participated in code reviews and implemented feedback from senior developers.",
-      "Developed a migration package to streamline the transition from other software to the company's platform.",
-    ],
-  },
-];
+    {
+      company: "Google Developer Student Club (GDSC)",
+      position: "Tech Lead",
+      type: "Web Team",
+      location: "Dharmsinh Desai University",
+      period: "November 2024 - Present",
+      achievements: [
+        "Led technical infrastructure development for DUHACKS 4.0 hackathon including the official website.",
+        "Conducted 'Tech Winter Break' workshop on WebRTC technology and UDP protocol advantages.",
+        "Mentored junior team members on web development best practices and modern technologies."
+      ],
+      responsibilities: {
+        "Technical Leadership": [
+          "Oversaw end-to-end development of the DUHACKS platform (duhacks.tech) for registration and event management.",
+          "Implemented responsive design principles ensuring cross-device compatibility for optimal user experience."
+        ]
+      }
+    },
+    {
+      company: "Hackathon Participation",
+      position: "Developer & Innovator",
+      type: "Competition",
+      location: "Gujarat, India",
+      period: "2023 - 2025",
+      achievements: [
+        "Developed 'AgroAdvice', an agricultural advisory application at Hackout @ DAIICT.",
+        "Built 'Barter Pay', a Flutter-based mobile application for cashless bartering at OdooXCharusat."
+      ],
+      responsibilities: {
+        "Hackout @ DAIICT": [
+          "Created intuitive UI/UX design optimized for farmers with varying technical proficiency.",
+          "Implemented core functionality connecting frontend interface with backend services.",
+          "Project repository: github.com/Dev22Patel/AgroAdvice"
+        ],
+        "OdooXCharusat": [
+          "Developed RESTful APIs using Node.js to connect mobile frontend with backend services.",
+          "Applied agile methodologies to rapidly develop within tight hackathon deadlines."
+        ]
+      }
+    }
+  ];

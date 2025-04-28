@@ -8,7 +8,8 @@ type Experience = {
   type: string;
   location: string;
   period: string;
-  responsibilities: string[];
+  achievements: string[];
+  responsibilities?: { [key: string]: string[] };
 };
 
 export function ExperienceSection() {
@@ -25,7 +26,7 @@ export function ExperienceSection() {
 }
 
 function ExperienceCard({ experience }: { experience: Experience }) {
-  const { company, position, type, location, period, responsibilities } = experience;
+  const { company, position, type, location, period, achievements, responsibilities } = experience;
 
   return (
     <div className="space-y-4">
@@ -47,15 +48,32 @@ function ExperienceCard({ experience }: { experience: Experience }) {
       <h4 className="text-lg font-medium">{position}</h4>
 
       <ul className="space-y-2 list-disc pl-5">
-        {responsibilities.map((item) => (
+        {achievements.map((item, index) => (
           <li
-            key={item.substring(0, 20)}
+            key={`${experience.company}-achievement-${index}`}
             className="text-zinc-700 dark:text-zinc-300"
           >
             {item}
           </li>
         ))}
       </ul>
+
+      {responsibilities && Object.entries(responsibilities).map(([category, items]) => (
+        <div key={`${experience.company}-${category}`} className="space-y-2">
+          <h5 className="font-medium text-zinc-800 dark:text-zinc-200">{category}</h5>
+          <ul className="space-y-1 list-disc pl-5">
+            {items.map((item, idx) => (
+              <li
+                key={`${experience.company}-${category}-${idx}`}
+                className="text-zinc-700 dark:text-zinc-300"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }
+
