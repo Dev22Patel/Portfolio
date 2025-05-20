@@ -2,6 +2,7 @@
 
 import { experiences as experiencesData } from "@/data/portfolio-data";
 
+// Updated type definition to properly accommodate your data structure
 type Experience = {
   company: string;
   position: string;
@@ -9,13 +10,25 @@ type Experience = {
   location: string;
   period: string;
   achievements: string[];
-  responsibilities?: { [key: string]: string[] };
+  // Make responsibilities more precise to match your actual data structure
+  responsibilities: Record<string, string[]>;
 };
 
 export function ExperienceSection() {
+  // Use a proper type assertion with Array.map to ensure type safety
+  const typedExperiences: Experience[] = experiencesData.map(exp => ({
+    ...exp,
+    // Filter out any keys with undefined values to satisfy Record<string, string[]>
+    responsibilities: Object.fromEntries(
+      Object.entries(exp.responsibilities || {}).filter(
+        ([, value]) => Array.isArray(value)
+      )
+    ) as Record<string, string[]>
+  }));
+
   return (
     <div className="space-y-12">
-      {experiencesData.map((exp) => (
+      {typedExperiences.map((exp) => (
         <ExperienceCard
           key={`${exp.company}-${exp.position}`}
           experience={exp}
@@ -76,4 +89,3 @@ function ExperienceCard({ experience }: { experience: Experience }) {
     </div>
   );
 }
-

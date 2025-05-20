@@ -1,56 +1,55 @@
 // Technology definitions
 // Technology definitions
 export const technologies = {
-    frontend: [
-      { name: "React", icon: "⚛" },
-      { name: "Next.js", icon: "△" },
-      { name: "TypeScript", icon: "TS" },
-      { name: "TailwindCSS", icon: "≈" },
-      { name: "ShadCN UI", icon: "■" },
-      { name: "Vue.js", icon: "V" },
-      { name: "Angular", icon: "◯" },
-      { name: "Redux", icon: "↺" },
-      { name: "HTML5", icon: "◊" },
-      { name: "CSS3", icon: "✧" },
-      { name: "JavaScript", icon: "JS" },
-      { name: "SASS/SCSS", icon: "§" },
-      { name: "Material UI", icon: "▣" },
-      { name: "Chakra UI", icon: "○" },
-      { name: "Framer Motion", icon: "⟳" },
-    ],
-    backend: [
-      { name: "Node.js", icon: "◉" },
-      { name: "Express.js", icon: "E" },
-      { name: "MongoDB", icon: "☰" },
-      { name: "PostgreSQL", icon: "◎" },
-      { name: "MySQL", icon: "▦" },
-      { name: "Firebase", icon: "▲" },
-      { name: "GraphQL", icon: "◬" },
-      { name: "REST API", icon: "⦿" },
-      { name: "Prisma", icon: "⬡" },
-      { name: "Supabase", icon: "⊡" },
-      { name: "Django", icon: "D" },
-      { name: "Flask", icon: "F" },
-      { name: "AWS", icon: "⎔" },
-      { name: "Vercel", icon: "◥" },
-    ],
-    tools: [
-      { name: "Git", icon: "↺" },
-      { name: "GitHub", icon: "⎈" },
-      { name: "VS Code", icon: "⬚" },
-      { name: "Docker", icon: "◘" },
-      { name: "Figma", icon: "⬝" },
-      { name: "Postman", icon: "↹" },
-      { name: "Jest", icon: "✓" },
-      { name: "Webpack", icon: "▣" },
-      { name: "NPM", icon: "⬡" },
-      { name: "Yarn", icon: "➰" },
-      { name: "Babel", icon: "⦾" },
-      { name: "ESLint", icon: "E" },
-      { name: "Jira", icon: "◇" },
-      { name: "Notion", icon: "⧉" },
-    ]
-  };
+  languages: [
+    { name: "C++", icon: "" },
+    { name: "Java", icon: "☕" },
+    { name: "JavaScript", icon: "JS" },
+    { name: "TypeScript", icon: "TS" },
+    { name: "Python", icon: "🐍" },
+  ],
+  frontend: [
+    { name: "React", icon: "⚛" },
+    { name: "Next.js", icon: "△" },
+    { name: "HTML5", icon: "◊" },
+    { name: "CSS3", icon: "✧" },
+    { name: "TailwindCSS", icon: "≈" },
+    { name: "ShadCN UI", icon: "■" },
+    { name: "Redux", icon: "↺" },
+  ],
+  backend: [
+    { name: "Node.js", icon: "◉" },
+    { name: "Express.js", icon: "E" },
+    { name: "Spring Boot", icon: "🍃" },
+    { name: "Spring", icon: "♨" },
+    { name: ".NET Core Web API", icon: "⧇" },
+    { name: "REST API", icon: "⦿" },
+    { name: "Hibernate", icon: "◐" },
+    { name: "JPA", icon: "⋈" },
+  ],
+  databases: [
+    { name: "MongoDB", icon: "☰" },
+    { name: "PostgreSQL", icon: "◎" },
+    { name: "MySQL", icon: "▦" },
+    { name: "Redis", icon: "⚡" },
+    { name: "Firebase", icon: "▲" },
+  ],
+  devops: [
+    { name: "AWS", icon: "⎔" },
+    { name: "Vercel", icon: "◥" },
+    { name: "Docker", icon: "◘" },
+  ],
+  tools: [
+    { name: "Git", icon: "↺" },
+    { name: "GitHub", icon: "⎈" },
+    { name: "VS Code", icon: "⬚" },
+    { name: "Postman", icon: "↹" },
+  ],
+  design: [
+    { name: "System Design", icon: "⬣" },
+  ]
+};
+
 
 // Personal information
 export const personalInfo = {
@@ -84,16 +83,30 @@ export const navigationItems = [
 // Project data
 export const projects = [
   {
-    title: "Portfolio Website",
+    title: "Smart Trip Planner",
     date: "April 25, 2025",
     description:
-      "A personal portfolio website to showcase my projects, experience, and skills. Built with Next.js, React, and TailwindCSS.",
+      "A MERN Stack + FastAPI application that helps users select destinations and retrieve top-rated places based on Google reviews. Features interactive maps with distance and travel time calculations.",
     image: "https://placehold.co/600x400/21bef9/ffffff",
     video: "videos/stp.mp4",
-    technologies: ["React.js", "Next.js", "TailwindCSS", "TypeScript"],
-    links: {
-      github: "https://github.com",
-      website: "https://example.com",
+    technologies: ["React", "MongoDB", "Express", "Node.js", "FastAPI", "Tailwind CSS", "Google Places API", "Vite"],
+    features: [
+      "Destination-based place recommendations",
+      "Google reviews integration",
+      "FastAPI backend for data processing",
+      "MERN stack frontend",
+      "Interactive map visualization",
+      "Distance and travel time estimation"
+    ],
+    structure: {
+      frontend: "React + Vite with Tailwind CSS",
+      backend: "FastAPI, Node.js, Express.js",
+      database: "MongoDB",
+      apis: "Google Places API"
+    },
+   links: {
+      github: "https://github.com/Dev22Patel/SmartTripPlanner",
+      website: "https://smart-trip-planner-v1.vercel.app/",
     },
   },
   {
@@ -104,8 +117,8 @@ export const projects = [
     image: "https://placehold.co/600x400/9a57c5/ffffff",
     technologies: ["React.js", "Node.js", "MongoDB", "Express", "Stripe"],
     links: {
-      github: "https://github.com",
-      website: "https://example.com",
+      github: "https://github.com/Dev22Patel/SmartTripPlanner",
+      website: "https://smart-trip-planner-v1.vercel.app/",
     },
   },
 ];

@@ -7,18 +7,13 @@ type Theme = "light" | "dark";
 interface ThemeContextType {
   theme: Theme;
   toggleTheme: () => void;
-  isTransitioning: boolean;
-  transitionPosition: { x: number, y: number };
-  setTransitionPosition: (position: { x: number, y: number }) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [mounted, setMounted] = useState(false);
-  const [transitionPosition, setTransitionPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     setMounted(true);
@@ -35,17 +30,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const toggleTheme = () => {
-    setIsTransitioning(true);
     setTheme((prevTheme) => {
       const newTheme = prevTheme === "light" ? "dark" : "light";
       localStorage.setItem("theme", newTheme);
       document.documentElement.classList.toggle("dark", newTheme === "dark");
-
-      // Reset transition state after animation completes
-      setTimeout(() => {
-        setIsTransitioning(false);
-      }, 800); // Animation duration
-
       return newTheme;
     });
   };
@@ -57,10 +45,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <ThemeContext.Provider value={{
       theme,
-      toggleTheme,
-      isTransitioning,
-      transitionPosition,
-      setTransitionPosition
+      toggleTheme
     }}>
       {children}
     </ThemeContext.Provider>

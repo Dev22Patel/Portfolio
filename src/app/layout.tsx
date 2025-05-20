@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Dev Patel | Personal Portfolio",
   description: "Personal portfolio showcasing projects, experience and skills",
-};  
+};
 
 export default function RootLayout({
   children,
@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
-          {children}
+            {children}
           <Toaster />
         </ThemeProvider>
       </body>

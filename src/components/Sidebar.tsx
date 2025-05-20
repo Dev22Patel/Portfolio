@@ -34,7 +34,7 @@ export function Sidebar({ technologies, name, tagline, email, social, websiteNam
             {websiteName}
           </Link>
         </div>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </div>
 
       <div className="space-y-2">
