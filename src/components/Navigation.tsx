@@ -8,7 +8,6 @@ const navigationItems = [
   { path: "/", label: "Projects" },
   { path: "/experience", label: "Experience" },
   { path: "/blogs", label: "Blogs" },
-  { path: "/uiforge", label: "UIForge" },
 ]
 
 export function Navigation() {

@@ -55,12 +55,13 @@ export const technologies = {
 export const personalInfo = {
   name: "Dev Patel",
   tagline: "Full Time Legend.",
-  email: "pateldev22.com",
+  email: "devpatel.work2004@gmail.com",
   websiteName: "DevPatel.com",
   social: {
-    github: "https://github.com/yourusername",
-    twitter: "https://twitter.com/yourusername",
-    linkedin: "https://linkedin.com/in/yourusername",
+    github: "https://github.com/Dev22Patel",
+    twitter: "https://x.com/Patel1684192Dev",
+    linkedin: "https://www.linkedin.com/in/dev-patel-230475252/",
+    discord: "https://discord.gg/yourinvite", // Add your Discord server/profile link
   }
 };
 
@@ -104,24 +105,67 @@ export const projects = [
       database: "MongoDB",
       apis: "Google Places API"
     },
-   links: {
-      github: "https://github.com/Dev22Patel/SmartTripPlanner",
-      website: "https://smart-trip-planner-v1.vercel.app/",
-    },
-  },
-  {
-    title: "E-commerce Platform",
-    date: "March 15, 2025",
-    description:
-      "A full-featured e-commerce platform with product catalog, shopping cart, and secure checkout. Integrated with Stripe for payment processing.",
-    image: "https://placehold.co/600x400/9a57c5/ffffff",
-    technologies: ["React.js", "Node.js", "MongoDB", "Express", "Stripe"],
     links: {
       github: "https://github.com/Dev22Patel/SmartTripPlanner",
       website: "https://smart-trip-planner-v1.vercel.app/",
     },
   },
+  {
+    title: "EventHive",
+    date: "February 10, 2025",
+    description:
+      "A MERN stack-based event management platform enabling real-time bidding between sponsors and event hosts across various sponsorship tiers. Built with a focus on interaction, automation, and scalability.",
+    image: "https://placehold.co/600x400/fe8040/ffffff",
+    video: "videos/eventHive.mp4",
+    technologies: [ "Redis", "Socket.IO", "Tailwind CSS","React", "Node.js", "Express", "MongoDB",],
+    features: [
+      "Sponsor-host bidding system with real-time WebSocket updates",
+      "Automated email notifications post-auction",
+      "Asynchronous queue system for decoupled email processing",
+      "Multiple sponsorship categories and bid management",
+    ],
+    structure: {
+      frontend: "React with Tailwind CSS and Socket.IO",
+      backend: "Node.js with Express and Redis queue",
+      database: "MongoDB",
+      realTime: "WebSocket (Socket.IO)",
+      asyncTasks: "Queue for email dispatch"
+    },
+    links: {
+      github: "https://github.com/Dev22Patel/EventHub",
+      website: "https://event-hub-topaz-seven.vercel.app/",
+    },
+  },
+  {
+    title: "CodeX",
+    date: "May 30, 2025",
+    description:
+      "A full-stack online coding platform inspired by LeetCode/Codeforces, supporting real-time contests, code execution, and leaderboard tracking with optimized performance and security.",
+    image: "https://placehold.co/600x400/4477ff/ffffff",
+    video: "videos/codex.mp4",
+    technologies: ["MySQL", "Prisma", "Redis", "Judge0","React", "Node.js", "Express",  "Tailwind CSS", "JWT"],
+    features: [
+      "Secure code execution via Judge0 with async webhook callbacks",
+      "Real-time leaderboard powered by Redis sorted sets",
+      "Token bucket–based rate limiting on submission",
+      "Invisible reCAPTCHA for anti-bot validation",
+      "JWT-based auth with protected routes and role management"
+    ],
+    structure: {
+      frontend: "React with Tailwind CSS",
+      backend: "Node.js + Express",
+      database: "MySQL + Prisma ORM",
+      codeExecution: "Judge0 (sandboxed execution)",
+      performance: "Redis (leaderboard, rate-limiting)",
+      security: "reCAPTCHA, JWT, Webhooks"
+    },
+    links: {
+      github: "https://github.com/Dev22Patel/CodeX",
+      website: "#",
+    },
+  },
 ];
+
 
 // Experience data
 export const experiences = [
