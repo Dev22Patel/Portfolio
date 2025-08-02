@@ -41,7 +41,6 @@ export default function ResumePage() {
                 <Download className="mr-2 h-4 w-4" /> Download PDF
               </a>
             </Button>
-            <ThemeToggle />
           </div>
         </div>
       </header>
